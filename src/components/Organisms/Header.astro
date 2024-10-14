@@ -1,0 +1,36 @@
+---
+import SendIcon from "../icons/Send.astro";
+import TransactionIcon from "../icons/Transactions.astro";
+import PendingIcon from "../icons/Pending.astro";
+import SettingsIcon from "../icons/Settings.astro";
+
+
+import SideBarOption from "../Molecules/SideBarOption.astro";
+import Span from "../Atoms/Span.astro";
+---
+<header>
+
+<aside class="fixed top-0 left-0 z-40 w-64 h-screen">
+  <div class="h-full px-4 bg-gray-300 dark:bg-gray-800">
+    <ul class="space-y-2 font-medium flex flex-col justify-around">
+      <SideBarOption>
+        <SendIcon />
+        <span class="ms-3">Send</span>
+      </SideBarOption>
+      <SideBarOption>
+        <TransactionIcon />
+        <span class="ms-3">Transacciones</span>
+      </SideBarOption>
+      <SideBarOption>
+        <PendingIcon />
+        <span class="ms-3">Pendiente</span>
+      </SideBarOption>
+      <SideBarOption>
+        <SettingsIcon />
+        <span class="ms-3">Ajustes</span>
+      </SideBarOption>
+    </ul>
+  </div>
+</aside>
+
+</header>
