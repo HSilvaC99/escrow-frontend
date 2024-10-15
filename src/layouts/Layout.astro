@@ -4,21 +4,25 @@ interface Props {
 }
 
 import "@fontsource-variable/inter";
+import NavBar from "../components/MultComponents/NavBar.astro";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 
 const { title } =  Astro.props;
-
 ---
 
-<html class="" lang="en">
+<html class="" lang="es">
 	<head>
+		<ViewTransitions />
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-white dark:bg-gray-900">
-		<slot />
+	<body class="bg-gray-100 dark:bg-gray-700">
+		<NavBar />
+		<div class="flex flex-col p-8 sm:ml-64">
+			<slot />
+		</div>
 	</body>
 </html>
 
