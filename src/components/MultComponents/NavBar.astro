@@ -3,57 +3,75 @@ import SendIcon from "../icons/Send.astro";
 import TransactionIcon from "../icons/Transactions.astro";
 import PendingIcon from "../icons/Pending.astro";
 import SettingsIcon from "../icons/Settings.astro";
+import SunIcon from "../icons/Sun.astro";
+import MoonIcon from "../icons/Moon.astro";
 
 import SideBarOption from "../UniqueComponents/SideBarOption.astro";
 import BottomNavOption from "../UniqueComponents/BottomNavOption.astro";
 ---
-<header>
-  <!-- Desktop bar -->
-  <aside class="fixed top-0 left-0 z-40 w-60 h-screen -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-    <div class="h-full overflow-y-auto bg-gray-200 dark:bg-gray-800">
-      <ul class="font-medium">
-        <SideBarOption href="/">
-          <SendIcon />
-          <span class="ms-3">Send</span>
-        </SideBarOption>
 
-        <SideBarOption href="/transactions">
-          <TransactionIcon />
-          <span class="ms-3">Transacciones</span>
-        </SideBarOption>
+<!-- Desktop bar -->
+<aside
+  class="fixed top-0 left-0 z-40 h-screen -translate-x-full md:-translate-x-2 transition-transform sm:translate-x-0"
+  aria-label="Sidebar"
+>
+  <div class="h-full overflow-y-auto bg-dark dark:bg-light">
+    <ul class="font-medium">
+      <SideBarOption href="/">
+        <SendIcon />
+        <span class="ms-3 md:block hidden">Enviar</span>
+      </SideBarOption>
 
-        <SideBarOption href="/pending">
-          <PendingIcon />
-          <span class="ms-3">Pendientes</span>
-        </SideBarOption>
+      <SideBarOption href="/transactions">
+        <TransactionIcon />
+        <span class="ms-3 md:block hidden">Transacciones</span>
+      </SideBarOption>
 
-        <SideBarOption href="/settings">
-          <SettingsIcon />
-          <span class="ms-3">Ajustes</span>
-        </SideBarOption>
-      </ul>
-    </div>
-  </aside>
+      <SideBarOption href="/pending">
+        <PendingIcon />
+        <span class="ms-3 md:block hidden">Pendientes</span>
+      </SideBarOption>
+
+      <SideBarOption href="/settings">
+        <SettingsIcon />
+        <span class="ms-3 md:block hidden">Ajustes</span>
+      </SideBarOption>
+      <div
+        class="fixed bottom-0 text-light bg-dark dark:bg-light dark:text-dark"
+      >
+        <button
+          type="button"
+          id="theme-selector"
+          class="m-3 flex items-center px-6 py-6 text-light rounded-lg dark:text-dark hover:bg-light_hover dark:hover:bg-dark_hover hover:text-black dark:hover:text-white group"
+        >
+          <SunIcon />
+          <MoonIcon />
+        </button>
+      </div>
+    </ul>
+  </div>
+</aside>
 
 <!-- Mobile bar -->
-  <nav class="fixed bottom-0 left-0 z-50 w-full h-16 border-t dark:border-gray-600 dark:bg-gray-700 -translate-x-0 sm:translate-y-full">
-    <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium bg-gray-200 dark:bg-gray-800">
-      <BottomNavOption href="/">
-        <SendIcon />
-        <span class="mt-1">Send</span>
-      </BottomNavOption>
-      <BottomNavOption href="/transactions">
-        <TransactionIcon />
-        <span class="mt-1">Transacciones</span>
-      </BottomNavOption>
-      <BottomNavOption href="/pending">
-        <PendingIcon />
-        <span class="mt-1">Pendientes</span>
-      </BottomNavOption>
-      <BottomNavOption href="/settings">
-        <SettingsIcon />
-        <span class="mt-1">Ajustes</span>
-      </BottomNavOption>
-    </div>
-  </nav>
-</header>
+<nav
+  class="fixed bottom-0 left-0 z-50 w-full h-16 border-t dark:border-dark_hover bg-dark dark:bg-light -translate-x-0 sm:translate-y-full"
+>
+  <div class="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
+    <BottomNavOption href="/">
+      <SendIcon />
+      <span class="mt-1">Enviar</span>
+    </BottomNavOption>
+    <BottomNavOption href="/transactions">
+      <TransactionIcon />
+      <span class="mt-1">Transacciones</span>
+    </BottomNavOption>
+    <BottomNavOption href="/pending">
+      <PendingIcon />
+      <span class="mt-1">Pendientes</span>
+    </BottomNavOption>
+    <BottomNavOption href="/settings">
+      <SettingsIcon />
+      <span class="mt-1">Ajustes</span>
+    </BottomNavOption>
+  </div>
+</nav>
