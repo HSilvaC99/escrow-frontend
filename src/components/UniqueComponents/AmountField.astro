@@ -11,13 +11,15 @@ const { id, placeholder, type } = Astro.props;
   </label>
   <div class="flex flex-row w-full max-w-96 gap-x-3">
     <input
+      required
       placeholder={placeholder}
       type={type}
+      name={id}
       id={id}
-      class="text-sm rounded-lg w-full p-2.5 shadow-md bg-white border border-light_hover text-gray-900 dark:bg-light dark:border-gray-500 dark:placeholder-gray-400 dark:text-white opacity-80 focus:opacity-100 transition-transform focus:scale-105"
+      class="text-sm rounded-lg w-full p-2.5 shadow-md bg-white border border-light_hover text-gray-900 dark:bg-light dark:border-gray-500 dark:placeholder-gray-400 dark:text-white opacity-80 focus:opacity-100 transition-transform focus:scale-105 hover:opacity-100"
     />
     <select
-      class="w-full max-w-20 ps-2.5 border rounded-lg shadow-md focus:outline-none focus:ring-1 text-sm bg-white border-light_hover text-gray-900 dark:bg-light dark:border-gray-500 dark:placeholder-gray-400 dark:text-white opacity-80 focus:opacity-100"
+      class="w-full max-w-20 ps-2.5 border rounded-lg shadow-md focus:outline-none focus:ring-1 text-sm bg-white border-light_hover text-gray-900 dark:bg-light dark:border-gray-500 dark:placeholder-gray-400 dark:text-white opacity-80 focus:opacity-100 hover:opacity-100 focus:scale-105 transition-transform"
       id="currency"
     >
       <option value="ether">Ether</option>

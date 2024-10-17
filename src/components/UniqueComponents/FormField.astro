@@ -10,9 +10,11 @@ const { id, placeholder, type } = Astro.props;
     <slot />
   </label>
   <input
+    required
     placeholder={placeholder}
     type={type}
+    name={id}
     id={id}
-    class="bg-white border shadow-md border-light_hover text-gray-900 text-sm rounded-lg min-w-full p-2.5 dark:bg-light dark:border-gray-500 dark:placeholder-gray-400 dark:text-white opacity-80 focus:opacity-100 transition-transform focus:scale-105"
+    class="bg-white border shadow-md border-light_hover text-gray-900 text-sm rounded-lg min-w-full p-2.5 dark:bg-light dark:border-gray-500 dark:placeholder-gray-400 dark:text-white opacity-80 focus:opacity-100 transition-transform focus:scale-105 hover:opacity-100"
   />
 </div>
