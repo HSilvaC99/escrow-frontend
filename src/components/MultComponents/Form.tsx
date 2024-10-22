@@ -5,7 +5,6 @@ import AmountField from "@components/UniqueComponents/AmountField";
 import connectToContract from "@lib/connectToContract";
 import validateFormData from "@lib/validateCredentials";
 import ErrorLabel from "@components/UniqueComponents/ErrorLabel";
-import { set } from "astro:schema";
 
 interface Errors {
   payee_address: boolean;
