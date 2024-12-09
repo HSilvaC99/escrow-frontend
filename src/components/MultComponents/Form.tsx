@@ -208,7 +208,7 @@ export default function Form() {
         </button>
       )}
 
-      {status && <p class="mt-4 text-center text-sm text-red-500">{status}</p>}
+      {status && <p class="mt-4 text-center text-sm text-yellow-300">{status}</p>}
       {contractAddress && (
         <p class="mt-2 text-center text-sm text-green-500">
           Dirección del contrato: {'  '}
